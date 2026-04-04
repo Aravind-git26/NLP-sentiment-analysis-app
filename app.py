@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 # Correct features and labels
-X = ["I love this movie", "The film is bad"]  # replace with actual data if you have
-y = [1, 0]  # 1 = positive, 0 = negative
+X = ["I love this movie", "This movie is great", "Amazing film", "The film is bad", "Horrible movie", "Not good"]
+y = [1, 1, 1, 0, 0, 0]
 
 # Vectorize text
 vectorizer = TfidfVectorizer()
