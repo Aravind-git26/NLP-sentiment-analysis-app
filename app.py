@@ -38,7 +38,7 @@ st.title("NLP Sentiment Analysis")
 text = st.text_area("Enter your Review")
 
 if st.button("Predict"):
-    data = ["The frim is not bad "]
+    review = ["The frim is not bad "]
     print("Prediction:", "positive" if model.predict(vectorizer.transform(review))[0] else 'negative')
     st.write("Prediction:", result)
 
