@@ -13,9 +13,9 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
-# Example training data
-X = ["I love this movie", "This movie is bad"]
-y = ["positive", "negative"]
+#features and labels
+x = df["review"]
+y = df['sentiment'].map({"positive": 1, "negative": 0})
 
 # Vectorize text
 vectorizer = TfidfVectorizer()
@@ -38,7 +38,7 @@ st.title("NLP Sentiment Analysis")
 text = st.text_area("Enter your Review")
 
 if st.button("Predict"):
-    data = vectorizer.transform([text])
-    result = model.predict(data)[0]
+    data = ["The frim is not bad "]
+    print("Prediction:", "positive" if model.predict(vectorizer.transform(review))[0] else 'negative')
     st.write("Prediction:", result)
 
