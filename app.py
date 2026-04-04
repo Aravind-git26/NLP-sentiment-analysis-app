@@ -14,8 +14,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 #features and labels
-x = df["review"]
-y = df['sentiment'].map({"positive": 1, "negative": 0})
+x = ["review"]
+y = ['sentiment'].map({"positive": 1, "negative": 0})
 
 # Vectorize text
 vectorizer = TfidfVectorizer()
